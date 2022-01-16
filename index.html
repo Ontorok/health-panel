@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Panel</title>
+    <script src="https://kit.fontawesome.com/3f41049c23.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #333;
+            color: #fff;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            height: 100vh;
+            
+        }
+
+        h2{
+            font-size: 42px;
+            font-weight: 600;
+            margin: 10px;
+        }
+
+        h2 span{
+            font-size: 30px;
+        }
+
+        .container > div{
+            height: minmax(230px,1fr);
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        .container > div:hover{
+            opacity: .7;
+            transform: scale(.98);
+        }
+       
+
+        .hill{
+            background: url('./assets/images/hill.jpg');
+        }
+        .flower{
+            background: url('./assets/images/flower.jpg');
+            color: #000;
+        }
+
+        .container > div:nth-child(1){
+            grid-column: 1 / span 2;
+        }
+        .container > div:nth-child(6){
+            grid-column: 3 / span 2;
+        }
+        .container > div:nth-child(9){
+            grid-column: 3 / span 2;
+        }
+        .container > div:nth-child(10){
+            grid-column: 1 / span 2;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hill">
+            <h2>16 <span>| 24</span></h2>
+            <p>Goals Completed</p>
+        </div>
+        <div class="hill">
+            <h2><i class="fas fa-battery-three-quarters"></i></h2>
+            <p>Respiration</p>
+        </div>
+        <div class="flower">
+            <h2><i class="fas fa-running"></i></h2>
+            <p>Miles</p>
+        </div>
+        <div class="hill">
+            <h2>36 <span></span></h2>
+            <p>Temperature</p>
+        </div>
+        <div class="hill">
+            <h2><i class="fas fa-bed"></i></h2>
+            <p>Sleep Keep</p>
+        </div>
+        <div class="flower">
+            <h2>98 <span>bpm</span></h2>
+            <p>Heart Rate</p>
+        </div>
+        <div class="hill">
+            <h2>107 <span>lbs</span></h2>
+            <p>Weight</p>
+        </div>
+        <div class="hill">
+            <h2>28 <span>%</span></h2>
+            <p>Fat Percentage</p>
+        </div>
+        <div class="flower">
+            <h2>118 <span>mgdl</span></h2>
+            <p>Blood Glucose</p>
+        </div>
+        <div class="flower">
+            <h2>680 <span>kCal</span></h2>
+            <p>Average Consumption</p>
+        </div>
+        <div class="flower">
+            <h2><i class="fas fa-dumbbell"></i></h2>
+            <p>Workouts</p>
+        </div>
+        <div class="flower">
+            <h2>85 <span>%</span></h2>
+            <p>Body Hydration</p>
+        </div>
+</body>
+
+</html>
